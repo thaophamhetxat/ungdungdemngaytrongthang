@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" id="thang"/>
+<button onclick="nhap_thang()">click</button>
+<h1 id="out"></h1>
+<script>
+    function nhap_thang() {
+        let thangdauvao = +document.getElementById('thang').value;
+        let songay = '';
+        switch (thangdauvao) {
+            case 1:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+                songay = '30 ngày';
+                break;
+            case 2:
+                songay = '28/29 ngày';
+                break;
+            default:
+                songay = 'tháng không hợp lệ';
+        }
+        document.getElementById('out').innerHTML = songay;
+    }
+
+
+</script>
+</body>
+</html>
